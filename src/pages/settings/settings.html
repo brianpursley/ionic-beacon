@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Settings</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-list-header>
+      Range Threshold
+      <ion-badge item-right>{{settings.accuracyThreshold}}</ion-badge>
+    </ion-list-header>
+    <ion-item>
+      <ion-range min="0" max="80" [(ngModel)]="4*settings.accuracyThreshold" (ngModelChange)="settings.accuracyThreshold=$event/4">>
+        <ion-label range-left>OFF</ion-label>
+        <ion-label range-right>20.0</ion-label>
+      </ion-range>
+    </ion-item>    
+  </ion-list>
+</ion-content>
