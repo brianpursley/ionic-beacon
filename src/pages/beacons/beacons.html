@@ -8,7 +8,7 @@
   <ion-list>
     <ion-item *ngFor="let beacon of beacons">
       <ion-avatar item-left>
-        <img src="assets/images/beacons/{{beacon.key}}.png">
+        <img src="assets/images/beacons/{{beacon.key.toUpperCase()}}.png">
       </ion-avatar>
       <h1>Beacon #{{beacon.minor}}</h1>
       <p style="float: right; color: #aaa;">{{beacon.timestamp | date:'h:mm:ss a'}}</p>
